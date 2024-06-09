@@ -1,5 +1,5 @@
 {
-  pkgs ? import <nixpkgs> {},
+  pkgs,
   system ? pkgs.stdenv.system,
 }:
 with pkgs; rec {
