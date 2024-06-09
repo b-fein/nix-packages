@@ -1,3 +1,7 @@
+.direnv/
+.devenv/
+.pre-commit-config.yaml
+
 # ---> Nix
 # Ignore build outputs from performing a nix-build or `nix build` command
 result
