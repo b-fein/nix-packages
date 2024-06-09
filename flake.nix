@@ -20,13 +20,17 @@
   } @ inputs: let
     forEachSystem = nixpkgs.lib.genAttrs (import systems);
   in {
-    packages = forEachSystem (system: let
-      pkgs = nixpkgs.legacyPackages.${system};
-    in {
-      devenv-up = self.devShells.${system}.default.config.procfileScript;
-
-      verapdf = pkgs.callPackage ./verapdf/default.nix {};
-    });
+    packages = forEachSystem (
+      system: let
+        pkgs = nixpkgs.legacyPackages.${system};
+      in
+        {
+          devenv-up = self.devShells.${system}.default.config.procfileScript;
+        }
+        // import ./default.nix {
+          inherit pkgs;
+        }
+    );
 
     devShells =
       forEachSystem
