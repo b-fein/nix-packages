@@ -19,7 +19,9 @@ in
       hash = "sha256-LO8cMEiNoOrj6+SDZ4rrEPRXT33h7OQ/HJ8fLrbumAs=";
     };
 
-    mvnHash = "sha256-pY2s5PWPax1K36tf0jJUoOosF2+JX17HyvQ0b6/6D28=";
+    patches = [./pin-default-maven-plugin-versions.patch];
+
+    mvnHash = "sha256-FYvlC+iPBzoKJlcoFail9azdDZZc+8SoPhP5SskI2LE=";
     mvnParameters = "-pl '!installer'";
 
     nativeBuildInputs = [makeWrapper];
