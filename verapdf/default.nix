@@ -5,7 +5,7 @@
   makeWrapper,
   maven,
 }: let
-  verapdfVersion = "1.27.18";
+  verapdfVersion = "1.27.22";
   snapshotVersion = "1.27.0-SNAPSHOT";
 in
   maven.buildMavenPackage rec {
@@ -16,12 +16,12 @@ in
       owner = "veraPDF";
       repo = "veraPDF-apps";
       rev = "v${version}";
-      hash = "sha256-LO8cMEiNoOrj6+SDZ4rrEPRXT33h7OQ/HJ8fLrbumAs=";
+      hash = "sha256-hhRV+OjjmzBOTGISyIwtgF0yQsMfdfcCCnKT4KhAZHg=";
     };
 
     patches = [./pin-default-maven-plugin-versions.patch];
 
-    mvnHash = "sha256-FYvlC+iPBzoKJlcoFail9azdDZZc+8SoPhP5SskI2LE=";
+    mvnHash = "sha256-dMkhe8wbAZdBip5wNr1A4dCyoaGfANmRl7S3mY7bjr0=";
     mvnParameters = "-pl '!installer'";
 
     nativeBuildInputs = [makeWrapper];

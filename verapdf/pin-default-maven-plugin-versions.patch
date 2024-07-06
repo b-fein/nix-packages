@@ -9,7 +9,7 @@ index 394e1f6..81ce2ef 100644
 +      <plugin>
 +        <groupId>org.apache.maven.plugins</groupId>
 +        <artifactId>maven-jar-plugin</artifactId>
-+        <version>3.4.1</version>
++        <version>3.4.2</version>
 +      </plugin>
 +
 +      <plugin>
@@ -21,7 +21,7 @@ index 394e1f6..81ce2ef 100644
 +      <plugin>
 +        <groupId>org.apache.maven.plugins</groupId>
 +        <artifactId>maven-enforcer-plugin</artifactId>
-+        <version>3.4.1</version>
++        <version>3.5.0</version>
 +        <executions>
 +          <execution>
 +            <id>require-all-plugin-versions-to-be-set</id>
@@ -55,7 +55,7 @@ index b80a6ce..d744f26 100644
 +      <plugin>
 +        <groupId>org.apache.maven.plugins</groupId>
 +        <artifactId>maven-jar-plugin</artifactId>
-+        <version>3.4.1</version>
++        <version>3.4.2</version>
 +      </plugin>
 +
 +      <plugin>
@@ -67,7 +67,7 @@ index b80a6ce..d744f26 100644
 +      <plugin>
 +        <groupId>org.apache.maven.plugins</groupId>
 +        <artifactId>maven-enforcer-plugin</artifactId>
-+        <version>3.4.1</version>
++        <version>3.5.0</version>
 +        <executions>
 +          <execution>
 +            <id>require-all-plugin-versions-to-be-set</id>
@@ -99,7 +99,7 @@ index e6eaa66..a81ef29 100644
 +      <plugin>
 +        <groupId>org.apache.maven.plugins</groupId>
 +        <artifactId>maven-jar-plugin</artifactId>
-+        <version>3.4.1</version>
++        <version>3.4.2</version>
 +      </plugin>
 +
 +      <plugin>
@@ -111,7 +111,7 @@ index e6eaa66..a81ef29 100644
 +      <plugin>
 +        <groupId>org.apache.maven.plugins</groupId>
 +        <artifactId>maven-enforcer-plugin</artifactId>
-+        <version>3.4.1</version>
++        <version>3.5.0</version>
 +        <executions>
 +          <execution>
 +            <id>require-all-plugin-versions-to-be-set</id>
