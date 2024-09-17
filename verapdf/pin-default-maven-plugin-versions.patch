@@ -1,5 +1,5 @@
 diff --git a/greenfield-apps/pom.xml b/greenfield-apps/pom.xml
-index 394e1f6..81ce2ef 100644
+index 0d58163..850fc82 100644
 --- a/greenfield-apps/pom.xml
 +++ b/greenfield-apps/pom.xml
 @@ -42,6 +42,38 @@
@@ -42,7 +42,7 @@ index 394e1f6..81ce2ef 100644
    </build>
  
 diff --git a/gui/pom.xml b/gui/pom.xml
-index b80a6ce..d744f26 100644
+index 4d7ef21..459f70b 100644
 --- a/gui/pom.xml
 +++ b/gui/pom.xml
 @@ -52,6 +52,42 @@
@@ -88,8 +88,57 @@ index b80a6ce..d744f26 100644
    </build>
  
    <dependencies>
+diff --git a/installer/pom.xml b/installer/pom.xml
+index 32f1014..8180ecf 100644
+--- a/installer/pom.xml
++++ b/installer/pom.xml
+@@ -325,6 +325,44 @@
+         </configuration>
+       </plugin>
+ 
++      <plugin>
++        <groupId>org.apache.maven.plugins</groupId>
++        <artifactId>maven-jar-plugin</artifactId>
++        <version>3.4.2</version>
++      </plugin>
++
++      <plugin>
++        <groupId>org.apache.maven.plugins</groupId>
++        <artifactId>maven-install-plugin</artifactId>
++        <version>3.1.2</version>
++      </plugin>
++
++      <plugin>
++        <groupId>org.apache.maven.plugins</groupId>
++        <artifactId>maven-dependency-plugin</artifactId>
++        <version>3.7.0</version>
++      </plugin>
++
++      <plugin>
++        <groupId>org.apache.maven.plugins</groupId>
++        <artifactId>maven-enforcer-plugin</artifactId>
++        <version>3.5.0</version>
++        <executions>
++          <execution>
++            <id>require-all-plugin-versions-to-be-set</id>
++            <phase>validate</phase>
++            <goals>
++              <goal>enforce</goal>
++            </goals>
++            <configuration>
++              <rules>
++                <requirePluginVersions />
++              </rules>
++            </configuration>
++          </execution>
++        </executions>
++      </plugin>
++
+     </plugins>
+   </build>
+ 
 diff --git a/pdfbox-apps/pom.xml b/pdfbox-apps/pom.xml
-index e6eaa66..a81ef29 100644
+index 8cf37f6..69220d5 100644
 --- a/pdfbox-apps/pom.xml
 +++ b/pdfbox-apps/pom.xml
 @@ -42,6 +42,38 @@
@@ -128,6 +177,49 @@ index e6eaa66..a81ef29 100644
 +        </executions>
 +      </plugin>
 +
+     </plugins>
+   </build>
+ 
+diff --git a/pom.xml b/pom.xml
+index 015dca6..a810563 100644
+--- a/pom.xml
++++ b/pom.xml
+@@ -143,12 +143,37 @@
+         <version>0.8.11</version>
+       </plugin>
+ 
+-
+       <plugin>
+         <groupId>org.codehaus.mojo</groupId>
+         <artifactId>versions-maven-plugin</artifactId>
+         <version>2.16.2</version>
+       </plugin>
++
++      <plugin>
++        <groupId>org.apache.maven.plugins</groupId>
++        <artifactId>maven-install-plugin</artifactId>
++        <version>3.1.2</version>
++      </plugin>
++
++      <plugin>
++        <groupId>org.apache.maven.plugins</groupId>
++        <artifactId>maven-enforcer-plugin</artifactId>
++        <version>3.5.0</version>
++        <executions>
++          <execution>
++            <id>require-all-plugin-versions-to-be-set</id>
++            <phase>validate</phase>
++            <goals>
++              <goal>enforce</goal>
++            </goals>
++            <configuration>
++              <rules>
++                <requirePluginVersions />
++              </rules>
++            </configuration>
++          </execution>
++        </executions>
++      </plugin>
      </plugins>
    </build>
  

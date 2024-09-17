@@ -21,7 +21,7 @@ in
 
     patches = [./pin-default-maven-plugin-versions.patch];
 
-    mvnHash = "sha256-xjy9NZM8w8uK/qF4QrguTOlUkLQCbvhON1wOh2qcp9k=";
+    mvnHash = "sha256-6pmCWtySQ87a1/hd62+58fX3ZC4uSKuz5mhYqaEX2vk=";
     mvnParameters = "-pl '!installer'";
 
     nativeBuildInputs = [makeWrapper];
