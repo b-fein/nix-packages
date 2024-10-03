@@ -21,8 +21,8 @@ in
 
     patches = [./pin-default-maven-plugin-versions.patch];
 
-    mvnHash = "sha256-6pmCWtySQ87a1/hd62+58fX3ZC4uSKuz5mhYqaEX2vk=";
-    mvnParameters = "-pl '!installer'";
+    mvnHash = "sha256-sVuzd4TUmrfvqhtiZL1L4obOF1DihMANbZNIy/LKyfw=";
+    mvnParameters = "-pl '!installer' -Dverapdf.timestamp=1980-01-01T00:00:02Z -Dproject.build.outputTimestamp=1980-01-01T00:00:02Z";
 
     nativeBuildInputs = [makeWrapper];
 
