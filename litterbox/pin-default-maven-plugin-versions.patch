@@ -1,0 +1,55 @@
+diff --git a/pom.xml b/pom.xml
+index 395cd7916..dcb4e69a1 100644
+--- a/pom.xml
++++ b/pom.xml
+@@ -48,8 +48,50 @@
+                             </rules>
+                         </configuration>
+                     </execution>
++                    <execution>
++                        <id>require-all-plugin-versions-to-be-set</id>
++                        <phase>validate</phase>
++                        <goals>
++                            <goal>enforce</goal>
++                        </goals>
++                        <configuration>
++                            <rules>
++                                <requirePluginVersions />
++                            </rules>
++                        </configuration>
++                    </execution>
+                 </executions>
+             </plugin>
++            <plugin>
++                <groupId>org.apache.maven.plugins</groupId>
++                <artifactId>maven-site-plugin</artifactId>
++                <version>3.21.0</version>
++            </plugin>
++            <plugin>
++                <groupId>org.apache.maven.plugins</groupId>
++                <artifactId>maven-resources-plugin</artifactId>
++                <version>3.3.1</version>
++            </plugin>
++            <plugin>
++                <groupId>org.apache.maven.plugins</groupId>
++                <artifactId>maven-jar-plugin</artifactId>
++                <version>3.4.2</version>
++            </plugin>
++            <plugin>
++                <groupId>org.apache.maven.plugins</groupId>
++                <artifactId>maven-clean-plugin</artifactId>
++                <version>3.4.0</version>
++            </plugin>
++            <plugin>
++                <groupId>org.apache.maven.plugins</groupId>
++                <artifactId>maven-install-plugin</artifactId>
++                <version>3.1.3</version>
++            </plugin>
++            <plugin>
++                <groupId>org.apache.maven.plugins</groupId>
++                <artifactId>maven-deploy-plugin</artifactId>
++                <version>3.1.3</version>
++            </plugin>
+             <plugin>
+                 <groupId>org.apache.maven.plugins</groupId>
+                 <artifactId>maven-compiler-plugin</artifactId>
