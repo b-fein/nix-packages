@@ -8,13 +8,13 @@
 in
   maven.buildMavenPackage rec {
     pname = "litterbox";
-    version = "1.9.1";
+    version = "1.9.2";
 
     src = fetchFromGitHub {
       owner = "se2p";
       repo = "LitterBox";
       rev = "v${version}";
-      hash = "sha256-SswFbRyINkAPSwFAvNNW7X73uUhgtjFRrTqztqRjD8A=";
+      hash = "sha256-nXI5Z3l1YwlDFtzkF45/jIM+82dghFblZZU/lo4RwD4=";
     };
 
     patches = [./pin-default-maven-plugin-versions.patch];
