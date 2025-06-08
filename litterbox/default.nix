@@ -32,9 +32,9 @@ in
         --add-flags "-jar $out/share/java/litterbox-${version}.jar"
     '';
 
-    meta = with lib; {
+    meta = {
       description = "A static code analysis tool for detecting bugs in Scratch projects";
       homepage = "https://scratch.fim.uni-passau.de/litterbox/";
-      licence = [licenses.gpl3Plus];
+      licence = [lib.licenses.gpl3Plus];
     };
   }
