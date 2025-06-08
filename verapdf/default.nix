@@ -37,9 +37,9 @@ in
         --add-flags "-jar $out/share/java/verapdf-pdfbox-apps-${version}.jar"
     '';
 
-    meta = with lib; {
+    meta = {
       description = "Industry Supported PDF/A and PDF/UA Validation";
       homepage = "https://verapdf.org/software";
-      licence = [licenses.gpl3Plus licences.mpl2Plus];
+      licence = [lib.licenses.gpl3Plus lib.licences.mpl2Plus];
     };
   }
