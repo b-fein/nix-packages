@@ -3,7 +3,6 @@
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
     systems.url = "github:nix-systems/default";
     devenv.url = "github:cachix/devenv";
-    devenv.inputs.nixpkgs.follows = "nixpkgs";
   };
 
   nixConfig = {
@@ -41,7 +40,7 @@
           inherit inputs pkgs;
           modules = [
             {
-              pre-commit.hooks.alejandra.enable = true;
+              git-hooks.hooks.alejandra.enable = true;
             }
           ];
         };
