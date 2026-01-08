@@ -8,18 +8,18 @@
 in
   maven.buildMavenPackage rec {
     pname = "litterbox";
-    version = "1.9.2";
+    version = "1.11";
 
     src = fetchFromGitHub {
       owner = "se2p";
       repo = "LitterBox";
       rev = "v${version}";
-      hash = "sha256-nXI5Z3l1YwlDFtzkF45/jIM+82dghFblZZU/lo4RwD4=";
+      hash = "sha256-cki+0l94/0WgZ2svXOHwIgsxzME39BSMKB00typWtpE=";
     };
 
     patches = [./pin-default-maven-plugin-versions.patch];
 
-    mvnHash = "sha256-cTaRhSDe5gOp3hiK77kVUAE3UfINbijBntWJvoS3G/M=";
+    mvnHash = "sha256-/rPqi+GISAhRXcFtAkMS8krxC8QIA2Q6SEEwPPoGAfk=";
     mvnParameters = "-Dproject.build.outputTimestamp=1980-01-01T00:00:02Z";
 
     nativeBuildInputs = [makeWrapper];
